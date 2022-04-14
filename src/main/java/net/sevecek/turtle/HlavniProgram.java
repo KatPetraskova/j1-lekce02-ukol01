@@ -35,22 +35,62 @@ public class HlavniProgram {
         //zofkaSePosuneVpravo(zofka);
 
         // zofka nakresli slunicko
-        nakresliSlunicko(zofka);
+        //nakresliSlunicko(zofka);
+
 
         // zofka se posune pod slunicko
-        zofka.penUp();
-        zofka.turnRight(180);
-        zofka.move(100);
-        zofka.turnRight(45);
-        zofka.move(100);
-        zofka.turnRight(135);
-        zofka.penDown();
+//        zofka.penUp();
+//        zofka.turnRight(180);
+//        zofka.move(100);
+//        zofka.turnRight(45);
+//        zofka.move(100);
+//        zofka.turnRight(135);
+//        zofka.penDown();
 
         // zofka kresli domecek - 5x
-        for (int m = 0; m < 5; m++) {
-            nakresliDomecek(zofka);
-        }
+//        for (int m = 0; m < 5; m++) {
+//            nakresliDomecek(zofka);
+//        }
 
+        // zofka se posune do spodni casti obrazovky
+//        zofka.penUp();
+//        zofka.turnRight(180);
+//        zofka.move(200);
+//        zofka.turnRight(90);
+//        zofka.move(700);
+//        zofka.turnRight(90);
+//        zofka.penDown();
+
+        // zofka nakresli domecek
+//        nakresliDomecek(zofka);
+
+        // zofka se posune o 100 px vpravo
+//        zofka.penUp();
+//        zofka.turnRight(90);
+//        zofka.move(100);
+//        zofka.turnLeft(90);
+//        zofka.penDown();
+
+        // zofka nakresli prasatko
+//        nakresliPrasatko(zofka);
+
+        // zofka se posune o 100 px vpravo
+//        zofka.penUp();
+//        zofka.turnRight(90);
+//        zofka.move(100);
+//        zofka.turnLeft(90);
+//        zofka.penDown();
+
+        // zofka nakresli domecek
+//        nakresliDomecek(zofka);
+
+        // zofka nakresli jmeno Katka
+        //nakresliKatka(zofka);
+
+        // cely obrazek
+        nakresliSlunicko(zofka);
+        zofkaSePosuneVpravo(zofka);
+        nakresliKatka(zofka);
         // zofka se posune do spodni casti obrazovky
         zofka.penUp();
         zofka.turnRight(180);
@@ -59,31 +99,113 @@ public class HlavniProgram {
         zofka.move(700);
         zofka.turnRight(90);
         zofka.penDown();
-
+        // zofka kresli domecek - 5x
+        for (int m = 0; m < 5; m++) {
+            nakresliDomecek(zofka);
+        }
+        // zofka se posune do spodni casti obrazovky
+        zofka.penUp();
+        zofka.turnRight(180);
+        zofka.move(200);
+        zofka.turnRight(90);
+        zofka.move(700);
+        zofka.turnRight(90);
+        zofka.penDown();
         // zofka nakresli domecek
         nakresliDomecek(zofka);
-
         // zofka se posune o 100 px vpravo
         zofka.penUp();
         zofka.turnRight(90);
         zofka.move(100);
         zofka.turnLeft(90);
         zofka.penDown();
-
         // zofka nakresli prasatko
         nakresliPrasatko(zofka);
-
         // zofka se posune o 100 px vpravo
         zofka.penUp();
         zofka.turnRight(90);
         zofka.move(100);
         zofka.turnLeft(90);
         zofka.penDown();
-
         // zofka nakresli domecek
         nakresliDomecek(zofka);
 
+    }
 
+
+    // zofka nakresli jmeno Katka
+    private void nakresliKatka(Turtle zofka) {
+        nakresliK(zofka);
+        mezeraMeziPismeny(zofka);
+        nakresliA(zofka);
+        mezeraMeziPismeny(zofka);
+        mezeraMeziPismeny(zofka);
+        mezeraMeziPismeny(zofka);
+        nakresliT(zofka);
+        mezeraMeziPismeny(zofka);
+        zofka.penUp();
+        zofka.turnLeft(180);
+        zofka.move(50);
+        zofka.turnRight(180);
+        zofka.penDown();
+        nakresliK(zofka);
+        mezeraMeziPismeny(zofka);
+        nakresliA(zofka);
+    }
+
+
+    // pismeno T
+    private void nakresliT(Turtle zofka) {
+        zofka.turnRight(180);
+        zofka.move(50);
+        zofka.turnRight(180);
+        zofka.move(100);
+        zofka.turnLeft(90);
+        zofka.move(50);
+        zofka.turnRight(180);
+        zofka.move(100);
+        zofka.turnLeft(90);
+    }
+
+
+    // pismeno A
+    private void nakresliA(Turtle zofka) {
+        zofka.turnRight(20);
+        zofka.move(103.0776);
+        zofka.turnRight(140);
+        zofka.move(103.0776);
+        zofka.turnLeft(180);
+        zofka.move(51.5388);
+        zofka.turnLeft(70);
+        zofka.move(32);
+        zofka.turnRight(90);
+    }
+
+
+    // mezera mezi pismeny
+    private void mezeraMeziPismeny(Turtle zofka) {
+        zofka.penUp();
+        zofka.turnRight(90);
+        zofka.move(30);
+        zofka.turnLeft(90);
+        zofka.penDown();
+    }
+
+
+    // pismeno K
+    private void nakresliK(Turtle zofka) {
+        zofka.move(50);
+        zofka.turnRight(180);
+        zofka.move(100);
+        zofka.turnLeft(180);
+        zofka.move(50);
+        zofka.turnRight(45);
+        zofka.move(70.71);
+        zofka.turnRight(180);
+        zofka.move(70.71);
+        zofka.turnLeft(90);
+        zofka.move(70.71);
+        zofka.turnLeft(135);
     }
 
     // metoda pro nakresleni domecku
